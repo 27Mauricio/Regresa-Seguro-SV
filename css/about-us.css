@@ -1,0 +1,140 @@
+.containerAbout {
+    background: #fff;
+    padding: 15px 9%;
+    padding-bottom: 20px;
+}
+
+.heading h1 {
+    text-align: center;
+    padding-bottom: 15px;
+    color: black;
+    font-size: 50px;
+    font-weight: 600;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    text-shadow: 0 10px 15px rgb(0,0,0,.3);
+}
+
+.heading p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 1%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-image {
+    flex: 0 0 30%; /* Ajustar este valor según el diseño deseado */
+    margin-right: 5%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8); 
+    border-radius: 4%;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.023);
+}
+
+.about-content {
+    flex: 1; /* El contenido ocupará el espacio restante */
+}
+
+.about-content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 15px;
+    text-align: left;
+}
+
+.about-content i {
+    font-size: 23px;
+    margin-right: 10px;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.about-image  {
+    view-timeline: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .heading {
+        padding: 0px 20px;
+    }
+
+    .heading h1 {
+        text-align: center;
+        text-shadow: 0 10px 15px rgb(0,0,0,.3);
+        padding-bottom: 40px;
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 75px;
+    }
+
+    .heading p {
+        font-size: 17px;
+        text-align: left;
+    }
+
+    .about {
+        padding: 20px 1%;
+        flex-direction: column;
+    }
+
+    .about-image {
+        margin-right: 0px;
+        margin-bottom: 50px;
+        flex: 0 0 100%;
+    }
+
+    .about-content p {
+        padding: 0px;
+        font-size: 15px;
+        flex: 0 0 100%;
+        text-align: left;
+        margin-top: 25px;
+    }
+
+    .about-content h2 {
+        text-align: center;
+    }
+
+    i {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,32 @@
+.footer {
+    padding: 15px 9%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    background: black;
+    color: white;
+    font-size: 14px;
+    justify-content: space-between; /* Añadido para espaciar los elementos */
+}
+
+.last-text {
+    flex: 1; /* Hace que ocupe el espacio disponible */
+    margin-top: 20px;
+}
+
+.img-footer {
+    width: 100px;
+    height: 50px;
+}
+
+.copy {
+    flex-basis: 100%; /* Hace que ocupe toda la anchura disponible */
+    text-align: center; /* Alinea el texto a la derecha */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.last-text span {
+    font-weight: 600;
+}

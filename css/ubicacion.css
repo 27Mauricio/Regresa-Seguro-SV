@@ -1,0 +1,61 @@
+.containerMapa {
+    background: #fff;
+    padding: 15px 20%;
+    margin-bottom: 100px;
+}
+
+.heading h1 {
+    text-align: center;
+    padding-bottom: 15px;
+    color: black;
+    font-size: 50px;
+    font-weight: 600;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-shadow: 0 10px 15px rgb(0,0,0,.3);
+}
+
+.heading p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 110px;
+}
+
+i {
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .containerMapa {
+        padding: 15px 3%;
+    }
+
+    .heading {
+        padding: 0px 20px;
+    }
+
+    .heading h1 {
+        text-align: center;
+        text-shadow: 0 10px 15px rgb(0,0,0,.3);
+        padding-bottom: 40px;
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 75px;
+    }
+
+    .heading p {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    iframe {
+        margin-top: -25px;
+        height: 400px;
+        width: 100%;
+    }
+
+    i {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #f7f7f7;
+    --second-bg-color: #ffffff;
+    --text-color: #000000;
+    --big-font: 2.6rem;
+    --h3-font: 1.7rem;
+    --p-font: .9rem;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--second-bg-color);
+    /* padding: 18px 15%;
+    border-bottom: 0.3px solid transparent;
+    transition: all .45s ease; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); 
+
+    padding: 12px 15%;
+    border-bottom: 1px solid transparent;
+    transition: all .45s ease;
+}
+
+.navlist {
+    display: flex;
+    padding-top: 18px;
+}
+
+.navlist a {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0 25px;
+    transition: all .45s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.navlist a:hover {
+    color: var(--text-color);
+}
+
+.navlist a::before {
+   content: "";
+   position: absolute;
+   display: block;
+   width: 100%;
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   background-color: #000;
+   transform: scaleX(0);
+   transition: transform 0.3s ease;
+}
+
+.navlist a:hover::before {
+   transform: scaleX(1);
+}
+
+#menu-icon {
+    font-size: 30px;
+    color: black;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+section {
+    padding: 160px 15% 120px;
+}
+
+header.sticky {
+    background: var(--second-bg-color);
+    padding: 5px 1%;
+}
+
+/* IMAGEN */
+
+.fondologo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.asesoria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    margin-left: 5px;
+    margin-right: 50px;
+}
+
+.link:hover {
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+i {
+    font-size: 25px; 
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1480px) {
+    header {
+        padding: 12px 2.5%;
+        transition: .1s;
+    }
+
+    header.sticky {
+        padding: 10px 2.5%;
+        transition: .1s;
+    }
+}
+
+@media (max-width: 840px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        text-align: left;
+        transition: all .45s ease;
+        border: 1px solid rgb(255, 255, 255);
+        box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.5);
+    }
+
+    .navlist a {
+        display: inline-block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: rgba(0, 0, 0, 0.60);
+    }
+
+    .navlist a:hover {
+        color: var(--text-color);
+    }
+
+    .navlist a.active {
+        color: var(--text-color);
+    }
+
+    .navlist.open {
+        top: 100%;
+    }
+
+    .fondologo {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+        margin-top: 100px; /* Asegura suficiente espacio debajo del menú en pantallas pequeñas */
+    }
+
+    .asesoria {
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+}
